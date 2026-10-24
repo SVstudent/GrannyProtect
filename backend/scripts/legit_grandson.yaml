@@ -1,0 +1,9 @@
+id: legit_grandson
+title: "Real grandson calling about Sunday dinner"
+kind: legit
+expected_max_level: 0
+turns:
+  - caller: "Hi Grandma, it's Jake! Are we still on for dinner Sunday?"
+  - granny: "Of course, honey. I'm making lasagna. Six o'clock."
+  - caller: "Perfect, I'll bring dessert. Mom says hi. Love you!"
+  - granny: "Love you too, sweetheart."

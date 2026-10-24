@@ -1,0 +1,10 @@
+- Bank impersonation: "fraud department" calls about suspicious charges, then asks to "verify" account/card numbers, PIN, one-time codes, or to move money to a "safe account". Real banks never ask for a PIN or full card number on an inbound call and tell you to call the number on your card.
+- Government impersonation: IRS, Social Security, Medicare, police, court, or DEA callers threatening arrest, warrants, suspended benefits or SSN, and demanding payment now. Agencies contact by mail first and never demand gift cards, wire, or crypto.
+- Grandparent / family emergency: "Grandma, it's me", a grandchild in jail, an accident, or a hospital; a "lawyer" or "officer" asks for bail money by cash courier or gift cards, and says "don't tell Mom and Dad".
+- Tech support: Microsoft, Apple, or Amazon say the computer is hacked or there's a refund error; they ask for remote access, gift cards, or bank login.
+- Utility shutoff: power or water will be cut off today unless paid immediately by prepaid card or app.
+- Prize / lottery / sweepstakes: you won, but must pay fees or taxes first.
+- Romance / friendship: a new online friend needs money for travel, medical bills, or customs fees.
+- Medicare / health: free braces or test kits in exchange for a Medicare number.
+- Common pressure tactics: urgency ("right now", "today", "don't hang up"), secrecy ("don't tell anyone", "keep this between us"), fear (arrest, frozen accounts), authority claims, and unusual payment (gift cards, wire, crypto, Zelle, cash courier, ATM).
+- Legitimate calls usually: don't request credentials, invite you to call back on an official number, accept "I'll call you back", and don't threaten or rush.

@@ -1,0 +1,10 @@
+id: case3_social_engineering
+title: "Case 3: social engineering (fake grandson, car accident, bail money, secrecy)"
+kind: scam
+expected_max_level: 3
+expected_outcome: terminated
+turns:
+  - caller: "Grandma? It's me! I'm in big trouble. I crashed the car and I need your help right now."
+  - granny: "Oh no, sweetheart! Are you hurt? Is that you, Jake? You sound different."
+  - caller: "Uh, it's Max! Grandma, please, there's no time for this. I need two thousand dollars for bail, and please don't tell Mom and Dad."
+  - granny: "Two thousand dollars? Oh dear..."

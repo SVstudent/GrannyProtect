@@ -1,0 +1,12 @@
+id: scam_bank
+title: "Fake Chase fraud department (the stage demo)"
+kind: scam
+expected_max_level: 3
+expected_outcome: terminated
+turns:
+  - caller: "Hi, this is Mark from Chase's fraud department, we've seen suspicious charges on your account."
+  - granny: "Oh hello dear, oh my, that's terrible. What happened?"
+  - caller: "To secure your account, I just need to verify your account number."
+  - granny: "Oh my, let me find it... it's four, seven, two, nine..."
+  - caller: "Ma'am, don't hang up, and don't tell your family, or your account will be frozen today."
+  - granny: "Okay, I won't tell anyone."

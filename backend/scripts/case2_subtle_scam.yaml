@@ -1,0 +1,15 @@
+id: case2_subtle_scam
+title: "Case 2: less obvious scam (polite Amazon refund that resists a call-back)"
+kind: scam
+expected_max_level: 3
+expected_outcome: terminated
+turns:
+  - caller: "Good afternoon! I'm calling about a refund on one of your recent orders. Do you have a quick minute?"
+  - granny: "A refund? Oh, how nice. Who is this, dear?"
+  - caller: "This is Daniel from Amazon customer service. Our system charged you twice for an order, so you're owed forty-nine dollars back."
+  - granny: "Oh, that's very kind of you to call."
+  - caller: "Oh, there's no need to call back, ma'am, I can do it right now. I just need the card number you used, so the refund goes to the right place."
+  - granny: "Oh, alright, let me find my purse."
+  # Only reached if the guardian asked its call-back question on the line above instead (the keyword-only mock path)
+  - caller: "No, no, please don't hang up, the refund will be cancelled if we stop now."
+  - granny: "Hmm, I'm not so sure about this."

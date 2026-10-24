@@ -1,0 +1,12 @@
+id: case1_obvious_scam
+title: "Case 1: obvious scam (fake Wells Fargo fraud line, card number, gift cards, threats)"
+kind: scam
+expected_max_level: 3
+expected_outcome: terminated
+turns:
+  - caller: "Hello, this is Steve from the Wells Fargo fraud team. We noticed an unusual charge on your card this morning."
+  - granny: "An unusual charge? Oh my goodness, what was it?"
+  - caller: "To secure your account, I just need to verify the card number on the front of your card."
+  - granny: "Let me get my purse... it's four, one, one, seven, two, two... is that what you need, dear?"
+  - caller: "Good. Now go buy five hundred dollars in gift cards to protect your money, and don't tell anyone, or your account will be frozen today."
+  - granny: "Gift cards? That doesn't sound right."

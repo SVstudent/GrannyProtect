@@ -1,0 +1,10 @@
+id: case5_normal_chat
+title: "Case 5: normal conversation (a friend from church about bingo)"
+kind: legit
+expected_max_level: 0
+turns:
+  - caller: "Hi Margaret, it's Dorothy from church! Are you still coming to bingo on Thursday?"
+  - granny: "Dorothy! Of course, I wouldn't miss it. Should I bring something?"
+  - caller: "Your famous lemon bars would be lovely. Everyone asked about them last time."
+  - granny: "Then lemon bars it is. I'll see you Thursday evening, dear."
+  - caller: "Wonderful. See you Thursday then. Bye now!"

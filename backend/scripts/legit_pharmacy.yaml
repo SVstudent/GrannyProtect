@@ -1,0 +1,9 @@
+id: legit_pharmacy
+title: "Pharmacy refill reminder"
+kind: legit
+expected_max_level: 0
+turns:
+  - caller: "Hi, this is Lisa from Walgreens on Main Street. Your blood pressure prescription is ready for pickup."
+  - granny: "Oh wonderful, thank you dear. Can I come by tomorrow?"
+  - caller: "Of course, we're open until nine. Have a lovely evening."
+  - granny: "You too, bye bye."

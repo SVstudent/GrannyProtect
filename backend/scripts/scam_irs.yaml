@@ -1,0 +1,12 @@
+id: scam_irs
+title: "IRS impersonation with arrest threat and wire transfer"
+kind: scam
+expected_max_level: 3
+expected_outcome: terminated
+turns:
+  - caller: "This is Officer Daniels with the IRS. There is a warrant for your arrest for unpaid taxes."
+  - granny: "A warrant? I always pay my taxes."
+  - caller: "You must pay immediately by wire transfer or bitcoin or the police will come to your house today."
+  - granny: "Oh dear, what's your social security number... I mean, do you need mine? It's five, five, five, one, two..."
+  - caller: "Yes, read me your social security number to verify your identity."
+  - granny: "Five, five, five, one, two, three, four..."

@@ -1,0 +1,12 @@
+id: case4_real_emergency_money
+title: "Case 4: not a scam, but asking for money (real grandson needs help with a tow)"
+kind: legit
+expected_max_level: 1
+turns:
+  - caller: "Hi Grandma, it's Jake! How are you doing?"
+  - granny: "Jake, sweetheart! I'm fine. What a nice surprise."
+  - caller: "So, I'm totally fine, but I had a little fender bender and the car got towed. The tow yard wants two hundred dollars before they close. Could you send it on Venmo? I'll pay you back Sunday."
+  - granny: "Oh, honey, of course I'll help. As long as you're okay."
+  - caller: "Biscuit! Give him a treat from me. Thanks so much, Grandma, you're the best."
+  - granny: "I'll send it right after we hang up. See you Sunday, love you."
+  - caller: "Love you too, Grandma. Bye!"

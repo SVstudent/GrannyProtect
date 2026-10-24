@@ -1,0 +1,12 @@
+# Shared secrets only the real family would know: things a scammer can't find online or on social media.
+# The guardian asks ONE of these when a caller claims to be family and it can't tell real from fake.
+# Answers are never shown on any screen. Several accepted spellings are fine.
+protected_name: Grandma
+rotate: false          # true: use a different question each call, so a scammer can't learn them
+facts:
+  - question: "What's the name of Grandma's dog?"
+    answers: ["biscuit"]
+  - question: "What does Grandma always bake for your birthday?"
+    answers: ["lemon cake", "lemon"]
+  - question: "What street does Grandma live on?"
+    answers: ["maple", "maple street"]

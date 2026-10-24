@@ -1,0 +1,30 @@
+[project]
+name = "granny-protect"
+version = "0.1.0"
+description = "Granny-Protect-5000: an AI shield between a phone call and someone vulnerable to scams"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "websockets>=14",
+    "pydantic>=2.7",
+    "pyyaml>=6",
+    "httpx>=0.27",
+    "python-dotenv>=1.0",
+    "anthropic>=0.40",
+    "openai>=1.50",
+]
+
+[project.optional-dependencies]
+mcp = ["fastmcp>=2.0"]
+
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.23"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.uv]
+package = false

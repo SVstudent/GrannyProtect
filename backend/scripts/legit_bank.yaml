@@ -1,0 +1,9 @@
+id: legit_bank
+title: "Real bank fraud alert that asks for nothing"
+kind: legit
+expected_max_level: 1
+turns:
+  - caller: "Hello, this is Chase calling about a card purchase of forty dollars at a grocery store. Was that you?"
+  - granny: "Yes, that was me this morning."
+  - caller: "Great, thank you. We will never ask for your PIN or account number. If you have any concerns, call the number on the back of your card."
+  - granny: "Thank you, goodbye."

@@ -1,0 +1,11 @@
+id: scam_grandson
+title: "Grandparent scam: grandson in jail needs bail in gift cards"
+kind: scam
+expected_max_level: 3
+expected_outcome: terminated
+turns:
+  - caller: "Grandma? It's me, I'm in trouble. I got in an accident and the police arrested me."
+  - granny: "Oh no, sweetheart, are you alright?"
+  - caller: "I need bail money right now. Can you go buy Google Play gift cards and read me the numbers?"
+  - granny: "Gift cards? How many do you need, dear?"
+  - caller: "Please don't tell Mom and Dad, keep this between us. I'll go to jail tonight if you don't."

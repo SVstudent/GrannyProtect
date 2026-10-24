@@ -1,0 +1,99 @@
+# Granny-Protect-5000 policy: the escalation ladder as a rule table.
+# Rules are checked top to bottom, and the first match sets the target level. Levels only ever go up.
+# The decision model's recommended level is one input, never the final word.
+
+red_flag_threshold: 0.6
+red_flags: [claims_authority, requests_credentials, requests_unusual_payment, demands_secrecy, threatens]
+
+# The keyword fast path sees no negation or context, so on its own it may only raise caution.
+# Alert and terminate need the decision model (in mock mode the regex *is* the model, so the cap is lifted).
+fast_path_max_level: 1
+# ...except for evidence the guardian trusts as much as the model: a remembered scam script, or granny's own request.
+fast_path_max_level_trusted: 3
+
+rules:
+  # Hanging up can't be undone, so a high score alone only ends the call once granny has already been
+  # warned (Alert). Coercion, a second PII attempt, or granny's own request can end it directly.
+  - id: R3a_score_critical
+    level: 3
+    description: Already at alert, and the scam score is at least 0.98 (near-certain)
+    when: {score_gte: 0.98, level_gte: 2}
+  - id: R3b_alert_plus_coercion
+    level: 3
+    description: Already at alert, and the caller demands secrecy or threatens
+    when: {level_gte: 2, any_flag: [demands_secrecy, threatens]}
+  - id: R3d_granny_asked
+    level: 3
+    description: Granny privately asked the guardian to hang up
+    when: {granny_hangup: true}
+  - id: R3f_failed_verification
+    level: 3
+    description: The caller failed the guardian's identity check
+    when: {verification_failed: true}
+  - id: R3c_repeat_pii
+    level: 3
+    description: Second attempt to read out private numbers
+    when: {pii_attempts_gte: 2}
+  - id: R2a_score_high
+    level: 2
+    description: Scam score is at least 0.8
+    when: {score_gte: 0.8}
+  - id: R2b_two_red_flags
+    level: 2
+    description: Two or more red flags together (for example, a bank claim plus a credential request)
+    when: {red_flags_gte: 2}
+  - id: R2e_verification_unanswered
+    level: 2
+    description: The caller didn't answer the guardian's identity check
+    when: {verification_unanswered: true}
+  - id: R2d_known_scam_script
+    level: 2
+    description: The caller is repeating a scam script the guardian stopped on an earlier call
+    when: {memory_match: true}
+  - id: R2c_model_alert_with_flag
+    level: 2
+    description: The decision model recommends alert and at least one red flag backs it up
+    when: {model_level_gte: 2, red_flags_gte: 1}
+  - id: R1a_score_caution
+    level: 1
+    description: Scam score is at least 0.5
+    when: {score_gte: 0.5}
+  - id: R1b_single_red_flag
+    level: 1
+    description: One red flag (an authority claim, a payment request, and so on)
+    when: {red_flags_gte: 1}
+  - id: R0_monitor
+    level: 0
+    description: No warning signs; keep monitoring
+    when: {}
+
+# When is the guardian UNCERTAIN? Then it verifies the caller's identity instead of guessing.
+# Clear-cut scams (score >= the upper bound, or hard rules) skip this and follow the ladder.
+verification:
+  family:              # "Grandma, it's me...": a real emergency and a grandparent scam sound the same
+    score_lt: 0.97
+    needs_any: [requests_unusual_payment, creates_urgency, demands_secrecy, requests_credentials]
+  institution:         # a bank or agency claim with a mixed picture
+    score_gte: 0.45
+    score_lt: 0.8
+    max_red_flags: 1
+  answer_timeout_s: 15
+  # Rules that still fire after a caller passes the check (everything else is held).
+  hard_rules: [R3b_alert_plus_coercion, R3c_repeat_pii, R3d_granny_asked, R3f_failed_verification]
+
+# The tools the agent may call at each level. Anything else comes back as "blocked by policy".
+tools_by_level:
+  0: [log_event, verify_caller]
+  1: [log_event, whisper_to_granny, challenge_caller, verify_caller]
+  2: [log_event, whisper_to_granny, challenge_caller, verify_caller, vibrate_granny, notify_family]
+  3: [log_event, whisper_to_granny, challenge_caller, vibrate_granny, notify_family, terminate_call]
+# Unlocked only while the PII guard is firing, at any level.
+pii_guard_tools: [redact_sensitive_number, end_redaction, mute_granny_to_caller, unmute_granny]
+# Always available once the call has ended.
+post_call_tools: [write_incident_report, notify_family, log_event]
+
+# Deterministic actions the policy itself runs when a level is entered. The agent only adds words.
+on_enter:
+  1: [{tool: whisper_to_granny, line: caution}]
+  2: [{tool: whisper_to_granny, line: alert}, {tool: vibrate_granny}, {tool: notify_family}]
+  3: [{tool: terminate_call}]
