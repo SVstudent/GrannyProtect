@@ -65,7 +65,7 @@ The scammer never hears a whisper, never sees a warning, and never hears the dig
 
 ## Architecture
 
-<p align="center"><img src="docs/architecture.svg" alt="Granny-Protect-5000 architecture: the scammer\'s call passes through the guardian, which listens, scores, decides and acts; it whispers privately to Grandma, cuts her card digits, hangs up, alerts a loved one on Telegram, and is watched by a self-supervisor. TokenRouter powers it." width="100%"></p>
+<p align="center"><img src="docs/architecture.svg" alt="Granny-Protect-5000 architecture: the scammer's call passes through the guardian, which listens, scores, decides and acts; it whispers privately to Grandma, cuts her card digits, hangs up, alerts a loved one on Telegram, and is watched by a self-supervisor. TokenRouter powers it." width="100%"></p>
 
 - **Transport:** each phone keeps one WebSocket (`/ws/caller`, `/ws/granny`) carrying 16 kHz PCM audio in 40 ms chunks plus control messages. The panel subscribes to `/ws/panel` for typed events. One server origin serves the frontend and all sockets.
 - **Audio never routes phone to phone.** It always passes through the guardian, which is what lets it delay, cut, or end the line.
