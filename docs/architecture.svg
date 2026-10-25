@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 560" width="1080" height="560" role="img" aria-label="Granny-Protect-5000 architecture"><style>
+.bg{fill:#ffffff}
+.box{fill:#ffffff;stroke:#c9d1ce;stroke-width:1.5}
+.guard{fill:#e2f1ee;stroke:#0f6e66;stroke-width:2}
+.step{fill:#ffffff;stroke:#0f6e66;stroke-width:1.2}
+text{font-family:"Manrope","Helvetica Neue",Arial,sans-serif}
+.t-title{font-weight:700;font-size:17px;fill:#1d2523}
+.t-big{font-weight:700;font-size:20px;fill:#0f6e66}
+.t-step{font-weight:600;font-size:13px;fill:#1d2523}
+.t-sub{font-size:11.5px;fill:#5d6a66}
+.t-lab{font-size:11.5px;font-weight:600;fill:#5d6a66}
+.t-guard{fill:#0f6e66}.t-danger{fill:#b2412e}.t-family{fill:#2f62b8}
+.w{stroke:#5d6a66;stroke-width:1.6;fill:none}.w-guard{stroke:#0f6e66;stroke-width:2;fill:none}
+.w-danger{stroke:#b2412e;stroke-width:2;fill:none}.w-family{stroke:#2f62b8;stroke-width:2;fill:none}
+.m-muted{fill:#5d6a66}.m-guard{fill:#0f6e66}.m-danger{fill:#b2412e}.m-family{fill:#2f62b8}
+.dash{stroke-dasharray:5 4}.lvl{stroke-width:1.2}
+@media (prefers-color-scheme: dark){
+.bg{fill:#0d1117}.box{fill:#161b22;stroke:#33403c}.guard{fill:#16302c;stroke:#52c2b4}.step{fill:#161b22;stroke:#52c2b4}
+.t-title,.t-step{fill:#e5ecea}.t-big,.t-guard{fill:#52c2b4}.t-sub,.t-lab{fill:#94a39e}.t-danger{fill:#ef8a73}.t-family{fill:#86aef0}
+.w{stroke:#94a39e}.w-guard{stroke:#52c2b4}.w-danger{stroke:#ef8a73}.w-family{stroke:#86aef0}
+.m-muted{fill:#94a39e}.m-guard{fill:#52c2b4}.m-danger{fill:#ef8a73}.m-family{fill:#86aef0}}
+</style><rect class="bg" width="1080" height="560" rx="14"/>
+      <defs><marker id="ar-w" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="m-muted"/></marker><marker id="ar-w-guard" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="m-guard"/></marker><marker id="ar-w-danger" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="m-danger"/></marker><marker id="ar-w-family" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="m-family"/></marker></defs>
+
+      
+      <rect class="box dash" x="380" y="20" width="320" height="52" rx="10"/>
+      <text class="t-step" x="540" y="42" text-anchor="middle">TokenRouter</text>
+      <text class="t-sub" x="540" y="60" text-anchor="middle">one key for hearing, thinking and speaking</text>
+      <line class="w dash" x1="540" y1="72" x2="540" y2="126" marker-end="url(#ar-w)"/>
+      <text class="t-lab" x="550" y="104">powers</text>
+
+      
+      <rect class="box" x="10" y="180" width="160" height="180" rx="12"/>
+      <text class="t-title t-danger" x="90" y="262" text-anchor="middle">Scammer</text>
+      <text class="t-sub" x="90" y="282" text-anchor="middle">calls from any phone</text>
+
+      
+      <rect class="box" x="910" y="180" width="160" height="180" rx="12"/>
+      <text class="t-title" x="990" y="262" text-anchor="middle">Grandma</text>
+      <text class="t-sub" x="990" y="282" text-anchor="middle">installs nothing,</text>
+      <text class="t-sub" x="990" y="298" text-anchor="middle">just talks</text>
+
+      
+      <rect class="guard" x="320" y="130" width="440" height="270" rx="16"/>
+      <text class="t-big" x="340" y="160">The guardian</text>
+      <text class="t-sub" x="740" y="160" text-anchor="end">sits inside the call</text>
+
+      <rect class="step" x="340" y="178" width="85" height="54" rx="8"/>
+      <text class="t-step" x="382.5" y="201" text-anchor="middle">Listen</text>
+      <text class="t-sub" x="382.5" y="218" text-anchor="middle">both sides</text>
+      <rect class="step" x="445" y="178" width="85" height="54" rx="8"/>
+      <text class="t-step" x="487.5" y="201" text-anchor="middle">Score</text>
+      <text class="t-sub" x="487.5" y="218" text-anchor="middle">how scammy?</text>
+      <rect class="step" x="550" y="178" width="85" height="54" rx="8"/>
+      <text class="t-step" x="592.5" y="201" text-anchor="middle">Decide</text>
+      <text class="t-sub" x="592.5" y="218" text-anchor="middle">by safety rules</text>
+      <rect class="step" x="655" y="178" width="85" height="54" rx="8"/>
+      <text class="t-step" x="697.5" y="201" text-anchor="middle">Act</text>
+      <text class="t-sub" x="697.5" y="218" text-anchor="middle">only if needed</text>
+      <line class="w-guard" x1="425" y1="205" x2="443" y2="205" marker-end="url(#ar-w-guard)"/>
+      <line class="w-guard" x1="530" y1="205" x2="548" y2="205" marker-end="url(#ar-w-guard)"/>
+      <line class="w-guard" x1="635" y1="205" x2="653" y2="205" marker-end="url(#ar-w-guard)"/>
+
+      
+      <text class="t-lab t-guard" x="340" y="268">Steps in gradually</text>
+      <rect class="step lvl" x="340" y="280" width="85" height="34" rx="17"/>
+      <text class="t-step" x="382.5" y="301" text-anchor="middle">Watching</text>
+      <rect class="step lvl" x="445" y="280" width="85" height="34" rx="17"/>
+      <text class="t-step" x="487.5" y="301" text-anchor="middle">Caution</text>
+      <rect class="step lvl" x="550" y="280" width="85" height="34" rx="17"/>
+      <text class="t-step" x="592.5" y="301" text-anchor="middle">Alert</text>
+      <rect class="step lvl" x="655" y="280" width="85" height="34" rx="17" style="stroke:#b2412e"/>
+      <text class="t-step t-danger" x="697.5" y="301" text-anchor="middle">Hang up</text>
+      <line class="w" x1="425" y1="297" x2="443" y2="297" marker-end="url(#ar-w)"/>
+      <line class="w" x1="530" y1="297" x2="548" y2="297" marker-end="url(#ar-w)"/>
+      <line class="w" x1="635" y1="297" x2="653" y2="297" marker-end="url(#ar-w)"/>
+      <text class="t-sub" x="340" y="345">Nothing happens on a normal call.</text>
+      <text class="t-sub" x="340" y="362">Each step unlocks stronger actions.</text>
+
+      
+      <line class="w" x1="170" y1="215" x2="318" y2="215" marker-end="url(#ar-w)"/>
+      <text class="t-lab" x="245" y="207" text-anchor="middle">his voice</text>
+      <line class="w-guard" x1="318" y1="268" x2="172" y2="268" marker-end="url(#ar-w-guard)"/>
+      <text class="t-lab t-guard" x="245" y="260" text-anchor="middle">her voice,</text>
+      <text class="t-lab t-guard" x="245" y="286" text-anchor="middle">card digits cut</text>
+      <line class="w-danger" x1="318" y1="335" x2="172" y2="335" marker-end="url(#ar-w-danger)"/>
+      <text class="t-lab t-danger" x="245" y="327" text-anchor="middle">hangs up</text>
+
+      
+      <line class="w" x1="760" y1="215" x2="908" y2="215" marker-end="url(#ar-w)"/>
+      <text class="t-lab" x="835" y="207" text-anchor="middle">his voice</text>
+      <line class="w" x1="908" y1="268" x2="762" y2="268" marker-end="url(#ar-w)"/>
+      <text class="t-lab" x="835" y="260" text-anchor="middle">her voice</text>
+      <line class="w-guard" x1="760" y1="335" x2="908" y2="335" marker-end="url(#ar-w-guard)"/>
+      <text class="t-lab t-guard" x="835" y="327" text-anchor="middle">private whisper</text>
+      <text class="t-sub" x="835" y="352" text-anchor="middle">only she hears it</text>
+
+      
+      <path class="w-family" d="M760 385 H990 V458" marker-end="url(#ar-w-family)"/>
+      <text class="t-lab t-family" x="980" y="420" text-anchor="end">Telegram alert</text>
+      <text class="t-lab t-family" x="980" y="436" text-anchor="end">+ live report</text>
+      <rect class="box" x="910" y="460" width="160" height="80" rx="12" style="stroke:#2f62b8"/>
+      <text class="t-title t-family" x="990" y="496" text-anchor="middle">Loved one</text>
+      <text class="t-sub" x="990" y="516" text-anchor="middle">knows in seconds</text>
+
+      
+      <rect class="box" x="320" y="450" width="440" height="90" rx="12"/>
+      <text class="t-title" x="340" y="478">Self-supervisor</text>
+      <text class="t-sub" x="340" y="499">Runs unsupervised for hours. Watches its own</text>
+      <text class="t-sub" x="340" y="516">spending, errors and confidence, and knows when to stop.</text>
+      <line class="w dash" x1="660" y1="450" x2="660" y2="402" marker-end="url(#ar-w)"/>
+      <text class="t-lab" x="670" y="432">watches, can slow or stop</text>
+    </svg>

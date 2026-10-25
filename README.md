@@ -65,26 +65,7 @@ The scammer never hears a whisper, never sees a warning, and never hears the dig
 
 ## Architecture
 
-```mermaid
-flowchart LR
-    S["📞 Scammer phone<br/>/caller"] -- "his voice" --> G
-    G -- "her voice<br/>(digits cut)" --> S
-    G -- "his voice" --> M["👵 Grandma phone<br/>/granny"]
-    M -- "her voice" --> G
-    G -. "private whisper<br/>only she hears" .-> M
-
-    subgraph G["Guardian (FastAPI server)"]
-      direction TB
-      L1["Listen<br/>live speech + accurate transcript"] --> L2["Score<br/>regex fast path + TypeSafe Jev typed decisions"]
-      L2 --> L3["Decide<br/>deterministic rules.yaml ladder"]
-      L3 --> L4["Act<br/>policy-gated agent tools"]
-    end
-
-    TR[("TokenRouter<br/>STT · decisions · agent · voice")] -. powers .-> G
-    SUP["Self-supervisor<br/>budget · circuit breakers · loops · watchdogs"] -. "can slow or stop" .-> G
-    G -- "Telegram alert<br/>+ live report" --> F["❤️ Loved one"]
-    G -- "every event" --> P["🖥️ Agent-mind panel<br/>/stage · /panel"]
-```
+<p align="center"><img src="docs/architecture.svg" alt="Granny-Protect-5000 architecture: the scammer\'s call passes through the guardian, which listens, scores, decides and acts; it whispers privately to Grandma, cuts her card digits, hangs up, alerts a loved one on Telegram, and is watched by a self-supervisor. TokenRouter powers it." width="100%"></p>
 
 - **Transport:** each phone keeps one WebSocket (`/ws/caller`, `/ws/granny`) carrying 16 kHz PCM audio in 40 ms chunks plus control messages. The panel subscribes to `/ws/panel` for typed events. One server origin serves the frontend and all sockets.
 - **Audio never routes phone to phone.** It always passes through the guardian, which is what lets it delay, cut, or end the line.
